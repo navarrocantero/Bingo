@@ -9,29 +9,23 @@ public class Main {
         Scanner input = new Scanner(System.in);
 
         //CONSTANTS
-        final int MIN = 1;
-        final int MAX = 90;
-        final int ROWS = 3;
-        final int POS = 5;
-        final int TEN = 10;
-        final int NUMS = ROWS * POS;
+        final int MIN = 1;  // Se usa para tener contabilizado el minimo numero de bolas
+        final int MAX = 90; // Se usa para tener contabilizado el maximo numero  de bolas
+        final int ROWS = 3;  // Se usa para tener contabilizado el numero de filas totales  del carton
+        final int POS = 5;  // Se usa para tener contabilizado el numero de posiciones del carton
+        final int NUMS = ROWS * POS; // Se usa para tener contabilizado el numero totales de numeros encontrados en un carton ( filas * posiciones)
         final int FIRSTLINE = 0;    // Se usa para controlar las bolas acertadas de la posición  1 a  5, o sea la primera fila del cartón
         final int SECONDLINE = 5;   // Se usa para controlar las bolas acertadas de la posición  5 a 10, o sea la segunda fila del cartón
         final int THIRDLINE = 10;   // Se usa para controlar las bolas acertadas de la posición 10 a 15, o sea la tercera fila del cartón
-
         //BOLOOLEAN
-        boolean bol = false;
         boolean bingo = true; // variable que indica si se ha coseguido ballsSecuence
-
         //VARIABLES
-        int numbr;
-        int line = 3;
-        int count = 0;
-
+        int numbr; // Variable que indica el numero de cartones a jugar
+        int count = 0; // Variable de control del numero de bingos
         //ARRAYS
-        int plays[][];
-        int lineWin[][];
-        int bingWin[][];
+        int plays[][]; // Array de  cartones de juego
+        int lineWin[][]; // Array contabilizador de lineas acertadas
+        int bingWin[][]; // Array contabilizador de bingos acertados
         int ballsSecuence [] = new int[MAX]; // en este array se recogen el orden de las 90 bolas que saldrán.
 
         System.out.println("\n Bienvenido al Bingo clásico \n");
