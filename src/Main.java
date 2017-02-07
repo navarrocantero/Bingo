@@ -4,7 +4,6 @@ import java.util.Random;
 
 public class Main {
 
-
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
@@ -16,92 +15,93 @@ public class Main {
         final int POS = 5;
         final int TEN = 10;
         final int NUMS = ROWS * POS;
-        final int FIRSTLINE = 0;
-        final int SECONDLINE = 5;
-        final int THIRDLINE = 10;
+        final int FIRSTLINE = 0;    // Se usa para controlar las bolas acertadas de la posición  1 a  5, o sea la primera fila del cartón
+        final int SECONDLINE = 5;   // Se usa para controlar las bolas acertadas de la posición  5 a 10, o sea la segunda fila del cartón
+        final int THIRDLINE = 10;   // Se usa para controlar las bolas acertadas de la posición 10 a 15, o sea la tercera fila del cartón
 
         //BOLOOLEAN
         boolean bol = false;
-        boolean bin = true;
+        boolean bingo = true; // variable que indica si se ha coseguido ballsSecuence
+
         //VARIABLES
         int numbr;
         int line = 3;
-        int count;
+        int count = 0;
+
         //ARRAYS
         int plays[][];
         int lineWin[][];
         int bingWin[][];
-        int bingo[] = new int[MAX];
+        int ballsSecuence [] = new int[MAX]; // en este array se recogen el orden de las 90 bolas que saldrán.
 
-
-        System.out.println("\n Welcome to the Classic Bingo \n");
+        System.out.println("\n Bienvenido al Bingo clásico \n");
         System.out.printf(" Insert number of games : ");
-        numbr = input.nextInt();                // Insert number of game plays
-        plays = new int[numbr][NUMS];          // and select for two arrays
-        lineWin = new int[numbr][POS];       // in first dimension the prev Int
+
+        numbr = input.nextInt();            // Insert number of game plays. Número de cartones
+
+        plays = new int[numbr][NUMS];       // and select for two arrays. Cada cartón con sus 15 espacios.
+        lineWin = new int[numbr][POS];      // in first dimension the prev Int
         bingWin = new int[numbr][ROWS];
 
-
+        // Se rellena cada uno de los cartones con números aleatorios de menor a mayor sin que se repitan
         for (int i = 0; i < plays.length; i++) {
-            fillSortedArray(plays[i], NUMS, MIN, MAX);
-
+            fillSortedArray (plays[i], NUMS, MIN, MAX);
         }
 
-        printArray(plays, POS, ROWS);
-        balls(bingo, MAX);
+        //  Función para imprimir el cartón o los cartones con los que se juega
+        printArray (plays, POS, ROWS);
 
-        do {
-            for (int i = 0; i < bingo.length; i++) {                      //Bucle para contar bolas
-                System.out.println(" The ball number " + ((i + 1) + " is : " + bingo[i]));
+        //  Función que simula el sacar las bolas.
+        balls (ballsSecuence, MAX);
 
-
-                for (int j = 0; j < numbr; j++) { //Cuenta los cartones
-                    for (int m = 0; m < NUMS; m++) { //Cuenta los números del cartón
-                        if (bingo[i] == plays[j][m]) { // Comprobar bola con todas las posiciones del cartón
-
-                            if ( m >= THIRDLINE) {      //Las 5 últimas posiciones
-                                lineWin[j][2]++; // si la bola pertenece a la tercera linea, el numero de carton J la linea 2 ++
-                                System.out.println("Encontrado en el cartón " + (j+1) +  " en la linea 3");
-                                if (lineWin [j][2]==5){ // cuando lo de arriba valga 5 tenemos linea
-                                    bingWin[j][0]++;
-                                    System.out.println("linea en 3");}
-
-                            }
-                            else if ( m >= SECONDLINE && m < THIRDLINE) {       //Las posiciones entre 5 y 10 del cartón
-                                lineWin[j][1]++;
-                                System.out.println("Encontrado en el cartón " + (j+1) + "  en la linea 2");
-                                if (lineWin [j][1]==5){
-                                    bingWin[j][0]++;
-                                    System.out.println("linea en 2");}
-                            }
-                            else if ( m >= FIRSTLINE && m <SECONDLINE) {        //Las primeras 5 posiciones del cartón
-                                lineWin[j][0]++;
-                                if (lineWin [j][0]==5){
-                                    bingWin[j][0]++;
-                                    System.out.println("linea en 1");}
-
-                                System.out.println("Encontrado en el cartón " + (j+1) +  "  en la linea 1");
-                            }
-
-                            for (int k = 0; k <ROWS ; k++) {
-                                if (bingWin[j][k] == ROWS){
-                                    System.out.println("Bingo en el cartón " + (j+1) );
-
+        //  En este bucle se muestran las bolas que van saliendo, que ya están puestas en el array ballsSecuence
+            for (int i = 0; i < ballsSecuence.length; i++) {    // este bucle hace que salgan las 90 bolas, poner || ballsSecuence == false
+                if (count != numbr) {
+                    System.out.println("La bola número " + ((i + 1) + " es : " + ballsSecuence[i]));
+                    for (int j = 0; j < numbr; j++) {               // Bucle para operar en cada uno de los cartones
+                        for (int m = 0; m < NUMS; m++) {            //  Bucle para operar con cada una de las posiciones del cartón en el que nos encontramos
+                            if (ballsSecuence[i] == plays[j][m]) {  // Comprobar bola con todas las posiciones del cartón
+                                if (m >= THIRDLINE) {               //Las 5 últimas posiciones
+                                    lineWin[j][2]++;                // si la bola pertenece a la tercera linea, el numero de carton J la linea 2 ++
+                                    System.out.println("Encontrado en el cartón " + (j + 1) + " en la linea 3");
+                                    if (lineWin[j][2] == 5) {       // cuando lo de arriba valga 5 tenemos linea
+                                        bingWin[j][0]++;
+                                        if (bingWin[j][0] != 3) {
+                                            System.out.println("Linea 3 en el cartón " + (j + 1));
+                                        }
+                                    }
+                                } else if (m >= SECONDLINE && m < THIRDLINE) {       //Las posiciones entre 5 y 10 del cartón
+                                    lineWin[j][1]++;
+                                    System.out.println("Encontrado en el cartón " + (j + 1) + "  en la linea 2");
+                                    if (lineWin[j][1] == 5) {
+                                        bingWin[j][0]++;
+                                        if (bingWin[j][0] != 3) {
+                                            System.out.println("Linea 2 en el cartón " + (j + 1));
+                                        }
+                                    }
+                                } else if (m >= FIRSTLINE && m < SECONDLINE) {        //Las primeras 5 posiciones del cartón
+                                    lineWin[j][0]++;
+                                    System.out.println("Encontrado en el cartón " + (j + 1) + "  en la linea 1");
+                                    if (lineWin[j][0] == 5) {
+                                        bingWin[j][0]++;
+                                        if (bingWin[j][0] != 3) {
+                                            System.out.println("Linea 1 en el cartón " + (j + 1));
+                                        }
+                                    }
                                 }
-                            }
+                                for (int k = 0; k < ROWS; k++) {
+                                    if (bingWin[j][k] == ROWS) {
+                                        System.out.println("Bingo en el cartón " + (j + 1));
+                                        count++;
+                                    }
+                                }
+                            }   // Fin comprobar bola con todas las posiciones del cartón
                         }
                     }
                 }
             }
-        }while (!bin);
     }
-
-
-    /**
-     * @param plays    Copy of first and principal ints array
-     * @param minCopy  Copy of the lower number needed
-     * @param maxCopy  Copy of the upper number needed
-     */
+    // crea un cartón con números ordendos aleatorios de menor a mayor sin repeticiones por cada vez que se llame a esta función
     static void fillSortedArray(int[] plays, int numsCopy, int minCopy, int maxCopy) {
 
         int arrayCopy[] = new int[numsCopy];
@@ -112,8 +112,6 @@ public class Main {
                 arrayCopy[j] = (int) (Math.random() * (maxCopy) + minCopy);
             }
             Arrays.sort(arrayCopy);                                     //order numbers
-
-
             for (int k = 1; k < arrayCopy.length; k++) {                    //Check that any number content in array is repeated
                 if (arrayCopy[k] == arrayCopy[k - 1]) {
                     bol = false;
@@ -123,23 +121,29 @@ public class Main {
                 }
             }
         } while (!bol);
-
         for (int c = 0; c < arrayCopy.length; c++) {             // When all numbers content in arrayCopy are different,
             plays[c] = arrayCopy[c];                            // we charge the arraycopy  to our principal array
         }
     }
 
-
     /**
-     * @param array    Copy of first and principal ints array
+     * Función para imprimir el cartón o los cartones con los que se juega
+     * @param array es el array plays, que vienen a ser los cartones
+     * @param colsCopy: copia de POS
+     * @param rowsCopy  Copia de las filas
      */
     static void printArray(int array[][], int colsCopy, int rowsCopy) {
+
         for (int i = 0; i < array.length; i++) {
+
             System.out.println("\n Game number " + (i + 1));
             System.out.println();
-            for (int k = 0; k < array[i].length; k++) {
-                System.out.printf("%3d", array[i][k]);
-                if ((k + 1) % colsCopy == 0) {
+
+            for (int j = 0; j < array[i].length; j++) {
+
+                System.out.printf("%3d", array[i][j]);
+
+                if ((j + 1) % colsCopy == 0) { // Esta parte hace que se impriman las casillas del array de 5 en 5; cuando j vale 4, + 1 == 5, 5 % 5 == 0 y entonces salto de línea y así
                     System.out.println();
                 }
             }
@@ -148,8 +152,9 @@ public class Main {
     }
 
     /**
-     * @param MAX Copy of the upper number needed
-     * @return
+     *  En esta función se rellena un array que contendrá las bolas que saldrán y su orden. Simula el sacar bola.
+     * @param bingoCopy
+     * @param MAX
      */
     static void  balls (int[] bingoCopy,final int MAX) {
 
@@ -157,23 +162,21 @@ public class Main {
         int maxAux=MAX;
         int ballsSorted[]=new int [MAX];
         int ballsCopy [] = new int [MAX];
-        Random  rnd = new Random();
 
+        Random  rnd = new Random();
 
         for (int i = 0; i < ballsSorted.length; i++) {
             ballsSorted[i] = i + 1;
         }
-
         for (int i = 0; i < ballsCopy.length; i++) {
+            // probar con el otro random a ver si da el mismo resultado
             num = rnd.nextInt(maxAux);
             ballsCopy[i] = ballsSorted[num];
             ballsSorted[num] = ballsSorted[maxAux - 1];
             maxAux--;
         }
-
         for (int i = 0; i < ballsCopy.length; i++) {
             bingoCopy[i]= ballsCopy[i];
         }
-
     }
 }
