@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="beca6b4c-c8b6-401e-b848-78f05abbeecc" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bingo/Main.class" afterPath="$PROJECT_DIR$/out/production/Bingo/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
     </list>
@@ -25,11 +26,12 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="582">
-              <caret line="190" column="1" lean-forward="false" selection-start-line="190" selection-start-column="1" selection-end-line="190" selection-end-column="1" />
+            <state relative-caret-position="102">
+              <caret line="6" column="44" lean-forward="false" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#7180#7209#0" expanded="false" />
+                <element signature="method#main#0;class#Main#0" expanded="false" />
+                <element signature="e#7300#7329#0" expanded="false" />
                 <element signature="method#fillSortedArray#0;class#Main#0" expanded="false" />
                 <element signature="docComment;method#printArray#0;class#Main#0" expanded="false" />
                 <element signature="method#printArray#0;class#Main#0" expanded="false" />
@@ -512,7 +514,7 @@
       <workItem from="1486556906912" duration="12000" />
       <workItem from="1486564526723" duration="36000" />
       <workItem from="1486654389877" duration="732000" />
-      <workItem from="1486679581563" duration="28000" />
+      <workItem from="1486679581563" duration="437000" />
     </task>
     <task id="LOCAL-00001" summary="Update 1">
       <created>1486511706705</created>
@@ -521,15 +523,22 @@
       <option name="project" value="LOCAL" />
       <updated>1486511706705</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update 3, funcionando">
+      <created>1486679625092</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1486679625092</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="979000" />
+    <option name="totallyTimeSpent" value="1388000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1378" height="780" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -540,7 +549,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26725402" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26725402" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -570,7 +579,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Update 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update 1" />
+    <MESSAGE value="update 3, funcionando" />
+    <option name="LAST_COMMIT_MESSAGE" value="update 3, funcionando" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -587,7 +597,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7180#7209#0" expanded="false" />
+            <element signature="method#main#0;class#Main#0" expanded="false" />
+            <element signature="e#7300#7329#0" expanded="false" />
             <element signature="method#fillSortedArray#0;class#Main#0" expanded="false" />
             <element signature="docComment;method#printArray#0;class#Main#0" expanded="false" />
             <element signature="method#printArray#0;class#Main#0" expanded="false" />
@@ -603,7 +614,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7180#7209#0" expanded="false" />
+            <element signature="method#main#0;class#Main#0" expanded="false" />
+            <element signature="e#7300#7329#0" expanded="false" />
             <element signature="method#fillSortedArray#0;class#Main#0" expanded="false" />
             <element signature="docComment;method#printArray#0;class#Main#0" expanded="false" />
             <element signature="method#printArray#0;class#Main#0" expanded="false" />
@@ -619,7 +631,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7180#7209#0" expanded="false" />
+            <element signature="method#main#0;class#Main#0" expanded="false" />
+            <element signature="e#7300#7329#0" expanded="false" />
             <element signature="method#fillSortedArray#0;class#Main#0" expanded="false" />
             <element signature="docComment;method#printArray#0;class#Main#0" expanded="false" />
             <element signature="method#printArray#0;class#Main#0" expanded="false" />
@@ -635,7 +648,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7180#7209#0" expanded="false" />
+            <element signature="method#main#0;class#Main#0" expanded="false" />
+            <element signature="e#7300#7329#0" expanded="false" />
             <element signature="method#fillSortedArray#0;class#Main#0" expanded="false" />
             <element signature="docComment;method#printArray#0;class#Main#0" expanded="false" />
             <element signature="method#printArray#0;class#Main#0" expanded="false" />
@@ -651,7 +665,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7180#7209#0" expanded="false" />
+            <element signature="method#main#0;class#Main#0" expanded="false" />
+            <element signature="e#7300#7329#0" expanded="false" />
             <element signature="method#fillSortedArray#0;class#Main#0" expanded="false" />
             <element signature="docComment;method#printArray#0;class#Main#0" expanded="false" />
             <element signature="method#printArray#0;class#Main#0" expanded="false" />
@@ -667,7 +682,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7180#7209#0" expanded="false" />
+            <element signature="method#main#0;class#Main#0" expanded="false" />
+            <element signature="e#7300#7329#0" expanded="false" />
             <element signature="method#fillSortedArray#0;class#Main#0" expanded="false" />
             <element signature="docComment;method#printArray#0;class#Main#0" expanded="false" />
             <element signature="method#printArray#0;class#Main#0" expanded="false" />
@@ -679,11 +695,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
-          <caret line="190" column="1" lean-forward="false" selection-start-line="190" selection-start-column="1" selection-end-line="190" selection-end-column="1" />
+        <state relative-caret-position="102">
+          <caret line="6" column="44" lean-forward="false" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7180#7209#0" expanded="false" />
+            <element signature="method#main#0;class#Main#0" expanded="false" />
+            <element signature="e#7300#7329#0" expanded="false" />
             <element signature="method#fillSortedArray#0;class#Main#0" expanded="false" />
             <element signature="docComment;method#printArray#0;class#Main#0" expanded="false" />
             <element signature="method#printArray#0;class#Main#0" expanded="false" />

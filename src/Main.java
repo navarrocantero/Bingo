@@ -1,7 +1,13 @@
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.Random;
+/**
+ *
+ * @authores @navarrocantero, @jarcattack, @meltik, @murtiuso,
+ * @anonymous ,@geothrill,  @nicoalcorcon94.
+ */
 public class Main {
+
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         //CONSTANTS
